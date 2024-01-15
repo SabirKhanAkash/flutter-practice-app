@@ -30,7 +30,7 @@ class _HomeActivityState extends State<HomeActivity> {
   showSnackBar(message, context) {
     return ScaffoldMessenger.of(context).showSnackBar(SnackBar(
       content: Text(message),
-      backgroundColor: const Color.fromARGB(255, 0, 73, 120),
+      backgroundColor: const Color.fromARGB(255, 0, 100, 210),
       action: SnackBarAction(
           label: 'ঠিক আছে',
           textColor: Colors.white,
@@ -150,15 +150,18 @@ class _HomeActivityState extends State<HomeActivity> {
           ],
         ),
       ),
-      body: Center(
+      body: Container(
+          alignment: Alignment.center,
+          padding: EdgeInsets.all(15),
           child: Text(
-        bodyText,
-        style: TextStyle(
+            bodyText,
+            style: const TextStyle(
             fontFamily: 'balooda',
             color: Colors.black,
             fontSize: 18,
             fontWeight: FontWeight.normal),
-      )),
+          )
+      ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: currentIndex,
         selectedItemColor: const Color.fromARGB(255, 0, 73, 120),
